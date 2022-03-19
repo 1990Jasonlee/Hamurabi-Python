@@ -78,3 +78,23 @@ def ask_how_much_grain_to_feed_people(bushels):
         print(f'O Great Hammurabi, surely you jest! {bushels} is the limit!')
     return bushels
 
+
+def ask_how_many_acres_to_plant(acres_owned, population, bushels):
+    pop_possible = acres_owned / 10;
+    bush_possible = bushels / 2;
+    possible_plant = 0
+
+    if population < pop_possible:
+        pop_possible = population * 10
+
+    possible_plant = int(input(f'O Great Hammurabi! How much acres would you like to plant? \n \
+                                     The limit is {possible_plant}.\n'))
+
+    if pop_possible < bush_possible and pop_possible < acres_owned:
+        possible_plant = pop_possible
+    elif bush_possible < pop_possible and bush_possible < acres_owned:
+        possible_plant = bush_possible
+    else:
+        possible_plant = acres_owned
+    return possible_plant
+

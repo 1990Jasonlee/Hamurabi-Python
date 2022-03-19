@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2abe1b0a-0d04-4d6a-89c6-1553ad743c57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Hamurabi-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hamurabi-Python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hammurabi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hamurabi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hamurabi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planning_phase.py" beforeDir="false" afterPath="$PROJECT_DIR$/planning_phase.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
