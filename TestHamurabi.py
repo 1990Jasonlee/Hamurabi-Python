@@ -1,9 +1,16 @@
-import unittest
+from unittest import TestCase
+from unittest.mock import patch
+from io import StringIO
+import planning_phase
 
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+class buying_test(TestCase):
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_ask_how_many_acres_to_buy(self, stdout_mock):
+
+        expected = 'O Great Hammurabi, how many acres of land do you wish to buy?\n'
+        planning_phase.ask_how_many_acres_to_buy()
+        self.assertEqual(expected, stdout_mock)  # add assertion here
 
 # def test_welcome_message():
 # def test_ask_to_buy(bushels, price):
