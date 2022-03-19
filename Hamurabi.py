@@ -106,10 +106,11 @@ def play_game():
             return 0
 
     def immigrants(population, acres_owned, grain_in_storage,):
+        new_immigrants = int((20 * acres_owned + grain_in_storage) / ((100 * population) + 1))
         if immigrants < 0:
-            immigrants= int((20 * acres_owned + grain_in_storage) / ((100 * population) + 1))
+            return 0
         else:
-            return int(immigrants)
+            return int(new_immigrants)
 
 
     def uprising(population, people_starved):
