@@ -11,12 +11,12 @@ def play_game():
                 planning_phase.ask_how_many_acres_to_buy(planning_phase.new_cost_of_land, planning_phase.bushels)
                 break
             elif choice == 2:
-                planning_phase.ask_how_many_acres_to_sell(planning_phase.acres,planning_phase.bushels)
+                planning_phase.ask_how_many_acres_to_sell(planning_phase.acres_owned, planning_phase.bushels)
                 break
             else:
                 print('Invalid input, Input number 1 to buy, 2 to sell')
-        planning_phase.ask_how_much_grain_to_feed_people()
-        planning_phase.ask_how_many_acres_to_plant()
+        planning_phase.ask_how_much_grain_to_feed_people(planning_phase.bushels)
+        planning_phase.ask_how_many_acres_to_plant(planning_phase.acres_owned, planning_phase.population, planning_phase.bushels)
 
 
 

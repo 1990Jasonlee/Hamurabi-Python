@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cca822c0-ae67-4e04-bb7c-6e48e345a587" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Hamurabi-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hamurabi-Python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hamurabi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hamurabi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestHamurabi.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestHamurabi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planning_phase.py" beforeDir="false" afterPath="$PROJECT_DIR$/planning_phase.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for TestHamurabi.summary_test.test_acres_to_buy">
+  <component name="RunManager" selected="Python.Hamurabi">
     <configuration name="Hammurabi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hamurabi-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -131,8 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_acres_to_buy" />
         <item itemvalue="Python.Hamurabi" />
+        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_acres_to_buy" />
         <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_ask_how_many_acres_to_buy" />
         <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test" />
         <item itemvalue="Python.Hammurabi" />

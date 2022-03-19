@@ -10,7 +10,7 @@ starvation_deaths = 0
 immigrants = 5
 population = 100
 harvest = 3000
-acres = 1000
+acres_owned = 1000
 grain_eaten_by_rats = 200
 bushels = 3000
 new_cost_of_land = 19
@@ -42,7 +42,7 @@ def summary():
     The population is now {population}.\n \
     We harvested {harvest} bushels at {harvest_ratio} bushels per acre.\n \
     Rats destroyed {grain_eaten_by_rats} bushels, leaving {bushels - grain_eaten_by_rats} bushels in storage.\n \
-    The city owns {acres} acres of land.\n \
+    The city owns {acres_owned} acres of land.\n \
     Land is currently worth {new_cost_of_land} bushels per acre.\n \
     -----------------------------------------------------\n')
 
