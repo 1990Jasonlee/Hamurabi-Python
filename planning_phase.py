@@ -94,7 +94,9 @@ def ask_how_many_acres_to_plant(acres_owned, population, bushels):
         possible_plant = pop_possible
     elif bush_possible < pop_possible and bush_possible < acres_owned:
         possible_plant = bush_possible
+    elif possible_plant > acres_owned:
+        print(f'O Great Hammurabi, surely you jest! {acres_owned} is the limit!')
     else:
         possible_plant = acres_owned
-    return possible_plant
 
+    return possible_plant
