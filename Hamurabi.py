@@ -38,7 +38,6 @@ def play_game():
         -----------------------------------------------------\n')
 
     def ask_how_many_acres_to_buy(price, bushels):
-        start = True
         acres_to_buy = int(input('O Great Hammurabi, how many acres of land do you wish to buy?\n'))
         price = new_cost_of_land * acres_to_buy
         if bushels > price:
