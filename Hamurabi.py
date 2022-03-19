@@ -9,7 +9,7 @@ def play_game():
     population = 100
     harvest = 3000
     acres_owned = 1000
-    grain_eaten_by_rats = 200
+    grain_eaten = 200
     bushels = 3000
     new_cost_of_land = 19
     acres_to_buy = 0
@@ -32,7 +32,7 @@ def play_game():
         In the previous year {immigrants} people entered the kingdom.\n \
         The population is now {population}.\n \
         We harvested {harvest} bushels at {harvest_ratio} bushels per acre.\n \
-        Rats destroyed {grain_eaten_by_rats} bushels, leaving {bushels - grain_eaten_by_rats} bushels in storage.\n \
+        Rats destroyed {grain_eaten} bushels, leaving {bushels - grain_eaten} bushels in storage.\n \
         The city owns {acres_owned} acres of land.\n \
         Land is currently worth {new_cost_of_land} bushels per acre.\n \
         -----------------------------------------------------\n')
@@ -124,8 +124,8 @@ def play_game():
 
     def grain_eaten_by_rats(harvest):
         if random.randint(0, 99) < 40:
-            bushels_destroyed = random.randint(10, 30) * harvest / 100
-            return bushels_destroyed
+            grain_eaten = random.randint(10, 30) * harvest / 100
+            return grain_eaten
         else:
             return 0
 
