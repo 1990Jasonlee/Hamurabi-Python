@@ -1,31 +1,10 @@
+import Hamurabi
+
+
 class PlanningPhase:
 
     def __init__(self):
-        pass
-
-
-# Default variables
-year = 1
-starvation_deaths = 0
-immigrants = 5
-population = 100
-harvest = 3000
-acres = 1000
-grain_eaten_by_rats = 200
-bushels = 3000
-new_cost_of_land = 19
-acres_to_buy = 0
-
-# New variables
-bushels_spent = 0
-buy_or_sell = 0
-acres_sold = 0
-bushels_to_feed = 0
-acres_planted = 0
-plague_bodies = 0
-bushels_for_planting = 0
-harvest_ratio = 3
-immigrant_sum = 0
+        super().__init__(Hamurabi.year,)
 
 
 def play_game():
@@ -70,3 +49,33 @@ def ask_how_many_acres_to_sell(acres_owned, bushels):
     return bushels
 
 
+def ask_how_much_grain_to_feed_people(bushels):
+    bushels_to_feed_ = int(input('O Great Hammurabi, how much grain do you wish to feed our people?\n'))
+    if bushels_to_feed < bushels:
+        bushels -= bushels_to_feed
+    else:
+        print(f'O Great Hammurabi, surely you jest! {bushels} is the limit!')
+    return bushels
+
+
+def ask_how_many_acres_to_plant(acres_owned, population, bushels):
+    pop_possible = acres_owned / 10;
+    bush_possible = bushels / 2;
+    possible_plant = 0
+
+    if population < pop_possible:
+        pop_possible = population * 10
+
+    possible_plant = int(input(f'O Great Hammurabi! How much acres would you like to plant? \n \
+                                     The limit is {possible_plant}.\n'))
+
+    if pop_possible < bush_possible and pop_possible < acres_owned:
+        possible_plant = pop_possible
+    elif bush_possible < pop_possible and bush_possible < acres_owned:
+        possible_plant = bush_possible
+    elif possible_plant > acres_owned:
+        print(f'O Great Hammurabi, surely you jest! {acres_owned} is the limit!')
+    else:
+        possible_plant = acres_owned
+
+    return possible_plant
