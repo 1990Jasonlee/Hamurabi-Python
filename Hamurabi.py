@@ -11,7 +11,7 @@ def play_game():
     acres_owned = 1000
     grain_eaten = 200
     bushels = 3000
-    new_cost_of_land = 19
+    cost_of_land = 19
     acres_to_buy = 0
 
     # New variables
@@ -34,12 +34,12 @@ def play_game():
         We harvested {harvest} bushels at {harvest_ratio} bushels per acre.\n \
         Rats destroyed {grain_eaten} bushels, leaving {bushels - grain_eaten} bushels in storage.\n \
         The city owns {acres_owned} acres of land.\n \
-        Land is currently worth {new_cost_of_land} bushels per acre.\n \
+        Land is currently worth {cost_of_land} bushels per acre.\n \
         -----------------------------------------------------\n')
 
     def ask_how_many_acres_to_buy(price, bushels):
         acres_to_buy = int(input('O Great Hammurabi, how many acres of land do you wish to buy?\n'))
-        price = new_cost_of_land * acres_to_buy
+        price = cost_of_land * acres_to_buy
         if bushels > price:
             bushels -= price
             print(f' Total price cost {price} bushels.')
@@ -53,8 +53,8 @@ def play_game():
     def ask_how_many_acres_to_sell(acres_owned, bushels):
         acres_sold = int(input('O Great Hammurabi, how many acres of land do you wish to sell?\n'))
         if acres_sold < acres_owned:
-            bushels += acres_sold * new_cost_of_land
-            print(f' Acres sold = {acres_sold * new_cost_of_land} bushels.')
+            bushels += acres_sold * cost_of_land
+            print(f' Acres sold = {acres_sold * cost_of_land} bushels.')
             print(f' You have {bushels} bushels.\n')
         else:
             print(f'O Great Hammurabi, surely you jest! {acres_owned} is the limit!')
@@ -129,25 +129,23 @@ def play_game():
             return 0
 
     def new_cost_of_land():
-        new_cost_of_land = random.randint(17, 23)
-        return new_cost_of_land
+        cost_of_land = random.randint(17, 23)
+        return cost_of_land
 
     game_over = False
     while year <= 10 and not game_over:
         summary()
         while True:
-            bushels = 2800
-            acres = 1000
             buy_or_sell = int(input('Enter 1 to Buy \nEnter 2 to Sell \n'))
             if buy_or_sell == 1:
-                bushels_spent = ask_how_many_acres_to_buy(new_cost_of_land, bushels)
-                acres = acres + (bushels - bushels_spent) / new_cost_of_land
+                bushels_spent = ask_how_many_acres_to_buy(cost_of_land, bushels)
+                acres = acres + (bushels - bushels_spent) / cost_of_land
                 bushels = bushels_spent
                 break
             elif buy_or_sell == 2:
                 bushels_spent = ask_how_many_acres_to_sell(acres, bushels)
                 acres -= acres_sold
-                bushels += acres_sold + (bushels - bushels_spent) / new_cost_of_land
+                bushels += acres_sold + (bushels - bushels_spent) / cost_of_land
                 break
             else:
                 print('Apologies Great Hammurabi, I did not understand you!\n'
