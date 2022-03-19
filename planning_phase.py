@@ -12,7 +12,7 @@ population = 100
 harvest = 3000
 acres = 1000
 grain_eaten_by_rats = 200
-bushels = 2800
+bushels = 3000
 new_cost_of_land = 19
 acres_to_buy = 0
 
@@ -24,7 +24,7 @@ bushels_to_feed = 0
 acres_planted = 0
 plague_bodies = 0
 bushels_for_planting = 0
-harvest_ratio = 0
+harvest_ratio = 3
 immigrant_sum = 0
 
 
