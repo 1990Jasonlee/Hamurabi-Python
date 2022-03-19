@@ -33,8 +33,7 @@ def play_game():
 
 
 # My Functions
-def ask_how_many_acres_to_buy(bushels):
-    global price
+def ask_how_many_acres_to_buy(price, bushels):
     start = True
     acres_to_buy = int(input('O Great Hammurabi, how many acres of land do you wish to buy?\n'))
     price = new_cost_of_land * acres_to_buy
@@ -47,3 +46,14 @@ def ask_how_many_acres_to_buy(bushels):
         print(
             f'O Great Hammurabi, surely you jest! We only have {bushels} bushels left. That would cost {price} bushels.\n')
     return bushels
+
+
+def ask_how_many_acres_to_sell(acres_owned, bushels):
+    acres_sold_ = int(input('O Great Hammurabi, how many acres of land do you wish to sell?\n'))
+    if acres_sold < acres_owned:
+        bushels += acres_sold * new_cost_of_land
+    else:
+        print(f'O Great Hammurabi, surely you jest! {acres_owned} is the limit!')
+    return bushels
+
+
