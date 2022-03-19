@@ -29,13 +29,14 @@ class summary_test(TestCase):
     Land is currently worth 19 bushels per acre.\n \
     -----------------------------------------------------\n\
     \n')
+
         planning_phase.summary()
         self.assertEqual(expected, stdout_mock.getvalue())
 
     @patch('builtins.input', return_value='1')
-    def test_ask_how_many_acres_to_buy(self):
-        actual = planning_phase.ask_how_many_acres_to_buy()
-        self.assertEqual(1,actual)
+    def test_acres_to_buy(self, user_input):
+        actual = planning_phase.acres_to_buy()
+        self.assertEqual(1, actual)
 
 
 

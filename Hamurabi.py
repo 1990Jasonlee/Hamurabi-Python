@@ -1,11 +1,27 @@
+import planning_phase
+
+
 def play_game():
-    year = 1
-
     game_over = False
-    while year < 10 and not game_over:
-        pass
-        #summary
+    while planning_phase.year <= 10 and not game_over:
+        planning_phase.summary()
+        while True:
+            choice = int(input('Input number 1 to buy, 2 to sell'))
+            if choice == 1:
+                planning_phase.ask_how_many_acres_to_buy(planning_phase.new_cost_of_land, planning_phase.bushels)
+                break
+            elif choice == 2:
+                planning_phase.ask_how_many_acres_to_sell(planning_phase.acres,planning_phase.bushels)
+                break
+            else:
+                print('Invalid input, Input number 1 to buy, 2 to sell')
 
+
+
+        planning_phase.year += 1
+
+
+play_game()
         #final summary
 
     # def ask_to_buy(bushels, price):
