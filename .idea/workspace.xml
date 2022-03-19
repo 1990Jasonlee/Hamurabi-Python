@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2abe1b0a-0d04-4d6a-89c6-1553ad743c57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Hamurabi-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hamurabi-Python.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hamurabi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hamurabi.py" afterDir="false" />
     </list>
@@ -16,7 +14,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for TestHamurabi.summary_test.test_acres_to_buy">
+  <component name="RunManager" selected="Python.Hamurabi">
     <configuration name="Hammurabi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hamurabi-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,8 +130,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_acres_to_buy" />
         <item itemvalue="Python.Hamurabi" />
+        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_acres_to_buy" />
         <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_ask_how_many_acres_to_buy" />
         <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test" />
         <item itemvalue="Python.Hammurabi" />
