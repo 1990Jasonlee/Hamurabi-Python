@@ -1,7 +1,8 @@
 from random import random
 
+
 def play_game():
-# Default variables
+    # Default variables
     year = 1
     starvation_deaths = 0
     immigrants = 5
@@ -36,7 +37,6 @@ def play_game():
         Land is currently worth {new_cost_of_land} bushels per acre.\n \
         -----------------------------------------------------\n')
 
-
     def ask_how_many_acres_to_buy(price, bushels):
         start = True
         acres_to_buy = int(input('O Great Hammurabi, how many acres of land do you wish to buy?\n'))
@@ -51,15 +51,15 @@ def play_game():
                 f'O Great Hammurabi, surely you jest! We only have {bushels} bushels left. That would cost {price} bushels.\n')
         return bushels
 
-
     def ask_how_many_acres_to_sell(acres_owned, bushels):
-        acres_sold_ = int(input('O Great Hammurabi, how many acres of land do you wish to sell?\n'))
+        acres_sold = int(input('O Great Hammurabi, how many acres of land do you wish to sell?\n'))
         if acres_sold < acres_owned:
             bushels += acres_sold * new_cost_of_land
+            print(f' Acres sold = {acres_sold * new_cost_of_land} bushels.')
+            print(f' You have {bushels} bushels.\n')
         else:
             print(f'O Great Hammurabi, surely you jest! {acres_owned} is the limit!')
         return bushels
-
 
     def ask_how_much_grain_to_feed_people(bushels):
         bushels_to_feed_ = int(input('O Great Hammurabi, how much grain do you wish to feed our people?\n'))
@@ -68,7 +68,6 @@ def play_game():
         else:
             print(f'O Great Hammurabi, surely you jest! {bushels} is the limit!')
         return bushels
-
 
     def ask_how_many_acres_to_plant(acres_owned, population, bushels):
         pop_possible = acres_owned / 10;
@@ -92,12 +91,12 @@ def play_game():
 
         return acres_planted
 
-
     def plague(population):
-            if random.randint(0, 99) < 15:
-                return population
-            else:
-                return 0
+        if random.randint(0, 99) < 15:
+            return population
+        else:
+            return 0
+
     def starved_deaths(population, bushels_to_feed_people):
         people_starved = population - bushels_to_feed_people / 20
         if people_starved > 0:
@@ -105,26 +104,23 @@ def play_game():
         else:
             return 0
 
-    def immigrants(population, acres_owned, grain_in_storage,):
+    def immigrants(population, acres_owned, grain_in_storage, ):
         new_immigrants = int((20 * acres_owned + grain_in_storage) / ((100 * population) + 1))
         if immigrants < 0:
             return 0
         else:
             return int(new_immigrants)
 
-
     def uprising(population, people_starved):
-        percentage =  people_starved / population;
+        percentage = people_starved / population;
         if percentage > 45:
             return 0
         else:
             return uprising
 
-
     def harvest(acres, bushels_used_as_seed):
         bushels_used_as_seed = acres * harvest
         return bushels_used_as_seed
-
 
     def grain_eaten_by_rats(harvest):
         if random.randint(0, 99) < 40:
@@ -133,41 +129,36 @@ def play_game():
         else:
             return 0
 
-
-
     def new_cost_of_land():
-            new_cost_of_land = random.randint(17, 23)
-            return new_cost_of_land
+        new_cost_of_land = random.randint(17, 23)
+        return new_cost_of_land
 
     game_over = False
     while year <= 10 and not game_over:
         summary()
         while True:
-            print(f'O Great Hammurabi! It is a new year! \nWould you like to buy or sell land?')
-            choice = int(input('Enter 1 to Buy \nEnter 2 to Sell \n'))
-            if choice == 1:
-                ask_how_many_acres_to_buy(new_cost_of_land, bushels)
+            bushels = 2800
+            acres = 1000
+            buy_or_sell = int(input('Enter 1 to Buy \nEnter 2 to Sell \n'))
+            if buy_or_sell == 1:
                 bushels_spent = ask_how_many_acres_to_buy(new_cost_of_land, bushels)
-                # acres = acres + (bushels - bushels_spent) / new_cost_of_land
-                # bushels = bushels_spent
+                acres = acres + (bushels - bushels_spent) / new_cost_of_land
+                bushels = bushels_spent
                 break
-            elif choice == 2:
-                ask_how_many_acres_to_sell(acres_owned, bushels)
-                # acres_sold = ask_how_many_acres_to_sell(acres)
-                # acres -= acres_sold;
-                # bushels += acres_sold * new_cost_of_land
+            elif buy_or_sell == 2:
+                bushels_spent = ask_how_many_acres_to_sell(acres, bushels)
+                acres -= acres_sold
+                bushels += acres_sold + (bushels - bushels_spent) / new_cost_of_land
                 break
             else:
                 print('Apologies Great Hammurabi, I did not understand you!\n'
                       'Invalid input, Input number 1 to buy, 2 to sell')
-        ask_how_much_grain_to_feed_people(bushels)
-        ask_how_many_acres_to_plant(acres_owned, population, bushels)
-
+        # ask_how_much_grain_to_feed_people(bushels)
+        # ask_how_many_acres_to_plant(acres_owned, population, bushels)
 
         year += 1
 
-
-            #final summary
+        # final summary
 
         # def final_message(acres, bushels, population, people_starved):
         # def plague(population):
@@ -177,9 +168,6 @@ def play_game():
         # def harvest(acres, bushels_used_as_seed):
         # def grain_eaten_by_rats(bushels):
         # def new_cost_of_land():
-
-
-
 
 
 play_game()
