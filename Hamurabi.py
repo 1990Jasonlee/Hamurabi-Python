@@ -124,8 +124,9 @@ def play_game():
 
     def grain_eaten_by_rats(bushels):
         if randint(0, 99) < 40:
-            grain_eaten = randint(10, 30) * bushels / 100
-            return grain_eaten
+            grains_eaten = round(randint(10, 30) * bushels / 100)
+            bushels -= grains_eaten
+            return grains_eaten
         else:
             return 0
 
@@ -163,10 +164,14 @@ def play_game():
         plague(population)
         starved_deaths(population, bushels_to_feed)
         uprising(population, starvation_deaths)
-        immigrants(population, acres_owned, bushels)
 
-        grain_eaten_by_rats(harvest)
+        if starvation_deaths == 0:
 
+            new_immigrant += immigrants(population, acres_owned, bushels)
+            population += new_immigrant
+
+        grain_eaten = grain_eaten_by_rats(bushels)
+        bushels -= grain_eaten
 
         new_cost_of_land()
         cost_of_land = new_cost_of_land()
