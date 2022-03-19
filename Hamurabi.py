@@ -1,28 +1,27 @@
-# Default variables
-year = 1
-starvation_deaths = 0
-immigrants = 5
-population = 100
-harvest = 3000
-acres_owned = 1000
-grain_eaten_by_rats = 200
-bushels = 3000
-new_cost_of_land = 19
-acres_to_buy = 0
-
-# New variables
-bushels_spent = 0
-buy_or_sell = 0
-acres_sold = 0
-bushels_to_feed = 0
-acres_planted = 0
-plague_bodies = 0
-bushels_for_planting = 0
-harvest_ratio = 3
-immigrant_sum = 0
-
-
 def play_game():
+# Default variables
+    year = 1
+    starvation_deaths = 0
+    immigrants = 5
+    population = 100
+    harvest = 3000
+    acres_owned = 1000
+    grain_eaten_by_rats = 200
+    bushels = 3000
+    new_cost_of_land = 19
+    acres_to_buy = 0
+
+    # New variables
+    bushels_spent = 0
+    buy_or_sell = 0
+    acres_sold = 0
+    bushels_to_feed = 0
+    acres_planted = 0
+    plague_bodies = 0
+    bushels_for_planting = 0
+    harvest_ratio = 3
+    immigrant_sum = 0
+
     game_over = False
     while year <= 10 and not game_over:
         summary()
@@ -32,14 +31,14 @@ def play_game():
             if choice == 1:
                 ask_how_many_acres_to_buy(new_cost_of_land, bushels)
                 bushels_spent = ask_how_many_acres_to_buy(new_cost_of_land, bushels)
-                 acres = acres + (bushels - bushels_spent) / new_cost_of_land
-                 bushels = bushels_spent
+                acres = acres + (bushels - bushels_spent) / new_cost_of_land
+                bushels = bushels_spent
                 break
             elif choice == 2:
                 ask_how_many_acres_to_sell(acres, bushels)
                 acres_sold = ask_how_many_acres_to_sell(acres)
-                 acres -= acres_sold;
-                 bushels += acres_sold * new_cost_of_land
+                acres -= acres_sold;
+                bushels += acres_sold * new_cost_of_land
                 
                 break
             else:
