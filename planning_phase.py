@@ -70,3 +70,11 @@ def ask_how_many_acres_to_sell(acres_owned, bushels):
     return bushels
 
 
+def ask_how_much_grain_to_feed_people(bushels):
+    bushels_to_feed_ = int(input('O Great Hammurabi, how much grain do you wish to feed our people?\n'))
+    if bushels_to_feed < bushels:
+        bushels -= bushels_to_feed
+    else:
+        print(f'O Great Hammurabi, surely you jest! {bushels} is the limit!')
+    return bushels
+

@@ -1,12 +1,14 @@
+import planning_phase
+
+
 def play_game():
     year = 1
 
     game_over = False
     while year < 10 and not game_over:
-        pass
-        #summary
+        planning_phase.summary()
 
-        #final summary
+        # final summary
 
     # def ask_to_buy(bushels, price):
     # def ask_to_sell(acres_owned):

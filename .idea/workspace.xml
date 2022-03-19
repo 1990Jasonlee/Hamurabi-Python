@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cca822c0-ae67-4e04-bb7c-6e48e345a587" name="Changes" comment="">
+    <list default="true" id="2abe1b0a-0d04-4d6a-89c6-1553ad743c57" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Hamurabi-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Hamurabi-Python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestHamurabi.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestHamurabi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planning_phase.py" beforeDir="false" afterPath="$PROJECT_DIR$/planning_phase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hammurabi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hamurabi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hamurabi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Unit Test" />
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="26WgdxKFTrvhfl7Rq3GPuDXquR7" />
+  <component name="ProjectId" id="26c3gDfOeIDnpCBVCMLvrwKc7Av" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for TestHamurabi.summary_test.test_summary">
+  <component name="RunManager">
     <configuration name="Hamurabi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hamurabi-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,53 +52,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for TestHamurabi.buying_test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Hamurabi-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestHamurabi.buying_test&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for TestHamurabi.buying_test.test_ask_how_many_acres_to_buy" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Hamurabi-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestHamurabi.buying_test.test_ask_how_many_acres_to_buy&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for TestHamurabi.summary_test.test_summary" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Hamurabi-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestHamurabi.summary_test.test_summary&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_summary" />
-        <item itemvalue="Python tests.Python tests for TestHamurabi.buying_test.test_ask_how_many_acres_to_buy" />
-        <item itemvalue="Python tests.Python tests for TestHamurabi.buying_test" />
         <item itemvalue="Python.Hamurabi" />
       </list>
     </recent_temporary>
@@ -120,11 +61,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cca822c0-ae67-4e04-bb7c-6e48e345a587" name="Changes" comment="" />
-      <created>1647544847718</created>
+      <changelist id="2abe1b0a-0d04-4d6a-89c6-1553ad743c57" name="Changes" comment="" />
+      <created>1647709157627</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647544847718</updated>
+      <updated>1647709157627</updated>
     </task>
     <servers />
   </component>
