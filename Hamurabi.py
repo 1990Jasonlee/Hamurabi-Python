@@ -96,22 +96,22 @@ def play_game():
         else:
             return 0
 
-    def starved_deaths(population, bushels_to_feed_people):
-        people_starved = population - bushels_to_feed_people / 20
+    def starved_deaths(population, bushels_to_feed):
+        people_starved = population - bushels_to_feed / 20
         if people_starved > 0:
             return people_starved
         else:
             return 0
 
-    def immigrants(population, acres_owned, grain_in_storage, ):
-        new_immigrants = int((20 * acres_owned + grain_in_storage) / ((100 * population) + 1))
+    def immigrants(population, acres_owned, bushels):
+        new_immigrants = int((20 * acres_owned + bushels) / ((100 * population) + 1))
         if immigrants < 0:
             return 0
         else:
             return int(new_immigrants)
 
-    def uprising(population, people_starved):
-        percentage = people_starved / population;
+    def uprising(population, starvation_deaths):
+        percentage = starvation_deaths / population;
         if percentage > 45:
             return 0
         else:
@@ -139,21 +139,23 @@ def play_game():
             buy_or_sell = int(input('Enter 1 to Buy \nEnter 2 to Sell \n'))
             if buy_or_sell == 1:
                 bushels_spent = ask_how_many_acres_to_buy(cost_of_land, bushels)
-                acres = acres + (bushels - bushels_spent) / cost_of_land
+                acres_owned = acres_owned + (bushels - bushels_spent) / cost_of_land
                 bushels = bushels_spent
                 break
             elif buy_or_sell == 2:
-                bushels_spent = ask_how_many_acres_to_sell(acres, bushels)
-                acres -= acres_sold
+                bushels_spent = ask_how_many_acres_to_sell(acres_owned, bushels)
+                acres_owned -= acres_sold
                 bushels += acres_sold + (bushels - bushels_spent) / cost_of_land
                 break
             else:
                 print('Apologies Great Hammurabi, I did not understand you!\n'
                       'Invalid input, Input number 1 to buy, 2 to sell')
-        # ask_how_much_grain_to_feed_people(bushels)
-        # ask_how_many_acres_to_plant(acres_owned, population, bushels)
-
+                break
         year += 1
+        plague(population)
+        starvation_deaths(population, bushels_to_feed)
+        uprising(population, starvation_deaths)
+        immigrants(population, acres_owned, bushels)
 
         # final summary
 
