@@ -15,6 +15,8 @@ def play_game():
                 break
             else:
                 print('Invalid input, Input number 1 to buy, 2 to sell')
+        planning_phase.ask_how_much_grain_to_feed_people()
+        planning_phase.ask_how_many_acres_to_plant()
 
 
 
@@ -24,8 +26,6 @@ def play_game():
 play_game()
         #final summary
 
-    # def ask_to_buy(bushels, price):
-    # def ask_to_sell(acres_owned):
     # def ask_to_feed_people(bushels):
     # def ask_to_plant_land(acres_owned, population, bushels):
     # def final_message(acres, bushels, population, people_starved):

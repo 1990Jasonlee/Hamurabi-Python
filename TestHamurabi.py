@@ -35,8 +35,9 @@ class summary_test(TestCase):
 
     @patch('builtins.input', return_value='1')
     def test_acres_to_buy(self, user_input):
+        expected = 19
         actual = planning_phase.acres_to_buy()
-        self.assertEqual(1, actual)
+        self.assertEqual(expected, actual)
 
 
 
