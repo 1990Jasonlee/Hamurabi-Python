@@ -75,24 +75,20 @@ def ask_how_much_grain_to_feed_people():
 
 
 def ask_how_many_acres_to_plant():
+    global possible_plant
+    possible_plant = int(input(f'O Great Hammurabi! How much acres would you like to plant? '))
+
     pop_possible = acres_owned / 10;
     bush_possible = bushels / 2;
-    global possible_plant
 
     if population < pop_possible:
         pop_possible = population * 10
 
-    possible_plant = int(input(f'O Great Hammurabi! How much acres would you like to plant? '))
-
-    if possible_plant < acres_owned:
-        print(f'O Great Hamurabi, surely you jest! The limit of acres you can plant is {acres_owned}')
-    elif pop_possible < bush_possible and pop_possible < acres_owned:
-        possible_plant = pop_possible
-    elif bush_possible < pop_possible and bush_possible < acres_owned:
-        possible_plant = bush_possible
+    if possible_plant <= acres_owned and pop_possible and bush_possible:
+        return possible_plant
     else:
-        possible_plant = acres_owned
-    return possible_plant
+        print(f'O Great Hamurabi, surely you jest! The limit of acres you can plant is {acres_owned}')
+
 
 
 def plague():
@@ -188,16 +184,16 @@ def play_game():
         bushels -= bushels_to_feed
         print(f'You now have {bushels} left after feeding your people.')
 
-        acres_to_plant = ask_how_many_acres_to_plant()
-        print('acres to plant = acres_to_plant')
-        bushels -= acres_to_plant * 2  # update bushel totals. It takes 2 bushels to plant 1 acre.
+        acres_planted = ask_how_many_acres_to_plant()
+        print(f'acres to plant = {acres_planted}')
+        bushels -= acres_planted * 2  # update bushel totals. It takes 2 bushels to plant 1 acre.
         print(f'You now have {bushels} left after planting your acres of land.')
 
-        harvested = harvest(acres_to_plant)
+        harvested = harvest(acres_planted)
         if harvested == 0:
             harvest_ratio = 0
         else:
-            harvest_ratio = harvested / acres_to_plant
+            harvest_ratio = harvested / acres_planted
             bushels += harvested
 
         year += 1
