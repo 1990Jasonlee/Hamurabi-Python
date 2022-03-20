@@ -48,47 +48,49 @@ def final_summary():
 
 
 def ask_how_many_acres_to_buy():
-    acres_to_buy = int(input('O Great Hammurabi, how many acres of land do you wish to buy?\n'))
-    price = cost_of_land * acres_to_buy
-    if bushels > price:
-        return price
-    else:
-        print(
-            f'O Great Hammurabi, surely you jest! We only have {bushels} bushels left. That would cost {price} bushels.\n')
+    while True:
+        acres_to_buy = int(input('O Great Hammurabi, how many acres of land do you wish to buy?\n'))
+        price = cost_of_land * acres_to_buy
+        if bushels > price:
+            return price
+        else:
+            print(
+                f'O Great Hammurabi, surely you jest! We only have {bushels} bushels left. That would cost {price} bushels.\n')
 
 
 def ask_how_many_acres_to_sell():
-    acres_to_sell = int(input('O Great Hammurabi, how many acres of land do you wish to sell?\n'))
-    if acres_to_sell < acres_owned:
-        price = acres_to_sell * cost_of_land
-        return price
-    else:
-        print(f'O Great Hammurabi, surely you jest! {acres_owned} is the limit!')
+    while True:
+        acres_to_sell = int(input('O Great Hammurabi, how many acres of land do you wish to sell?\n'))
+        if acres_to_sell < acres_owned:
+            price = acres_to_sell * cost_of_land
+            return price
+        else:
+            print(f'O Great Hammurabi, surely you jest! {acres_owned} is the limit!')
 
 
 def ask_how_much_grain_to_feed_people():
-    fed = int(input('O Great Hammurabi, how much grain do you wish to feed our people?\n'))
-    if fed <= bushels:
-        return fed
-    else:
-        print(f'O Great Hammurabi, surely you jest! {bushels} is the limit!')
+    while True:
+        fed = int(input('O Great Hammurabi, how much grain do you wish to feed our people?\n'))
+        if fed <= bushels:
+            return fed
+        else:
+            print(f'O Great Hammurabi, surely you jest! {bushels} is the limit!')
 
 
 def ask_how_many_acres_to_plant():
     global possible_plant
-    possible_plant = int(input(f'O Great Hammurabi! How much acres would you like to plant? '))
-
     pop_possible = acres_owned / 10;
     bush_possible = bushels / 2;
 
-    if population < pop_possible:
-        pop_possible = population * 10
+    while True:
+        possible_plant = int(input(f'O Great Hammurabi! How much acres would you like to plant? '))
+        if population < pop_possible:
+            pop_possible = population * 10
 
-    if possible_plant <= acres_owned and pop_possible and bush_possible:
-        return possible_plant
-    else:
-        print(f'O Great Hamurabi, surely you jest! The limit of acres you can plant is {acres_owned}')
-
+        if possible_plant <= acres_owned and pop_possible and bush_possible:
+            return possible_plant
+        else:
+            print(f'O Great Hamurabi, surely you jest! The limit of acres you can plant is {acres_owned}')
 
 
 def plague():
@@ -162,7 +164,7 @@ def play_game():
     global harvest_ratio
     global total_immigrant
 
-    while year <= 3 and not game_over:
+    while year <= 10 and not game_over:
         while True:
             buy_or_sell = int(input('Enter 1 to Buy \nEnter 2 to Sell \n'))
             if buy_or_sell == 1:
