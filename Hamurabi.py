@@ -17,6 +17,7 @@ bushels_to_feed = 0
 acres_planted = 0
 bushels_for_planting = 0
 harvest_ratio = 3
+total_immigrant = 0
 
 
 def summary():
@@ -24,12 +25,13 @@ def summary():
     You are in year {year} of your ten year rule.\n \
     In the previous year {starvation_deaths} people starved to death.\n \
     In the previous year {new_immigrant} people entered the kingdom.\n \
-    The population is now {population}.\n \
+    The population is now {round(population)}.\n \
     We harvested {harvested} bushels at {harvest_ratio} bushels per acre.\n \
     Rats destroyed {grain_eaten} bushels, leaving {bushels - grain_eaten} bushels in storage.\n \
     The city owns {acres_owned} acres of land.\n \
     Land is currently worth {cost_of_land} bushels per acre.\n \
     -----------------------------------------------------\n')
+
 
 def final_summary():
     if uprising == True:
@@ -39,10 +41,11 @@ def final_summary():
              GAME OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     else:
         print(f'O great Hammurabi!\n \
-             In your {year} year rule, {new_immigrant + immigrants()} people entered the kingdom.\n \
+             In your {year} year rule, {total_immigrant} people entered the kingdom.\n \
              The city owns {acres_owned} acres of land.\n \
              You own {bushels} bushels!\n \
              Congratulations on your retirement')
+
 
 def ask_how_many_acres_to_buy():
     acres_to_buy = int(input('O Great Hammurabi, how many acres of land do you wish to buy?\n'))
@@ -74,23 +77,22 @@ def ask_how_much_grain_to_feed_people():
 def ask_how_many_acres_to_plant():
     pop_possible = acres_owned / 10;
     bush_possible = bushels / 2;
-    possible_plant = 0
+    global possible_plant
 
     if population < pop_possible:
         pop_possible = population * 10
 
-    acres_to_plant = int(input(f'O Great Hammurabi! How much acres would you like to plant? '))
+    possible_plant = int(input(f'O Great Hammurabi! How much acres would you like to plant? '))
 
-    if pop_possible < bush_possible and pop_possible < acres_owned:
+    if possible_plant < acres_owned:
+        print(f'O Great Hamurabi, surely you jest! The limit of acres you can plant is {acres_owned}')
+    elif pop_possible < bush_possible and pop_possible < acres_owned:
         possible_plant = pop_possible
     elif bush_possible < pop_possible and bush_possible < acres_owned:
         possible_plant = bush_possible
-    elif possible_plant > acres_owned:
-        print(f'O Great Hammurabi, surely you jest! {acres_owned} is the limit!')
     else:
         possible_plant = acres_owned
-
-    return acres_to_plant
+    return possible_plant
 
 
 def plague():
@@ -145,9 +147,6 @@ def new_cost_of_land():
     return cost_of_land
 
 
-
-
-
 def play_game():
     game_over = False
     summary()
@@ -165,8 +164,9 @@ def play_game():
     global acres_planted
     global bushels_for_planting
     global harvest_ratio
+    global total_immigrant
 
-    while year <= 10 and not game_over:
+    while year <= 3 and not game_over:
         while True:
             buy_or_sell = int(input('Enter 1 to Buy \nEnter 2 to Sell \n'))
             if buy_or_sell == 1:
@@ -186,8 +186,12 @@ def play_game():
 
         bushels_to_feed = ask_how_much_grain_to_feed_people()
         bushels -= bushels_to_feed
+        print(f'You now have {bushels} left after feeding your people.')
 
         acres_to_plant = ask_how_many_acres_to_plant()
+        print('acres to plant = acres_to_plant')
+        bushels -= acres_to_plant * 2  # update bushel totals. It takes 2 bushels to plant 1 acre.
+        print(f'You now have {bushels} left after planting your acres of land.')
 
         harvested = harvest(acres_to_plant)
         if harvested == 0:
@@ -204,6 +208,7 @@ def play_game():
         starvation_deaths = starved_deaths()
         if starvation_deaths == 0:
             new_immigrant += immigrants()
+            total_immigrant += new_immigrant
             population += new_immigrant
         else:
             population -= starvation_deaths
