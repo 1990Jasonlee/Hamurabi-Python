@@ -59,7 +59,7 @@ def play_game():
 
     def ask_how_much_grain_to_feed_people(bushels):
         bushels_to_feed = int(input('O Great Hammurabi, how much grain do you wish to feed our people?\n'))
-        if bushels_to_feed < bushels:
+        if bushels_to_feed <= bushels:
             bushels -= bushels_to_feed
         else:
             print(f'O Great Hammurabi, surely you jest! {bushels} is the limit!')
@@ -94,11 +94,16 @@ def play_game():
             return 0
 
     def starved_deaths(population, bushels_to_feed):
-        people_starved = population - bushels_to_feed / 20
-        if people_starved > 0:
-            return people_starved
+        if (bushels_to_feed/20) < population:
+            print(f'We lost {population-(bushels_to_feed/20)} people to starvation')
+            return population - (bushels_to_feed/20)
         else:
             return 0
+        # people_starved = population - bushels_to_feed / 20
+        # if people_starved > 0:
+        #     return people_starved
+        # else:
+        #     return 0
 
     def immigrants(population, acres_owned, bushels):
         new_immigrants = int((20 * acres_owned + bushels) / (100 * population))
@@ -108,11 +113,11 @@ def play_game():
             return int(new_immigrants)
 
     def uprising(population, starvation_deaths):
-        percentage = starvation_deaths /( population);
-        if percentage > 45:
-            return False
-        else:
+        percentage = starvation_deaths /(population + 1)
+        if percentage > .45:
             return True
+        else:
+            return False
 
     def harvest(acres_planted):
         rand = randint(1, 7)
@@ -142,19 +147,20 @@ def play_game():
                 bushels = bushels_spent
                 break
             elif buy_or_sell == 2:
-                bushels_spent = ask_how_many_acres_to_sell(acres_owned, bushels)
+                acres_sold = ask_how_many_acres_to_sell(acres_owned, bushels)
                 acres_owned -= acres_sold
                 bushels += acres_sold + (bushels - bushels_spent) / cost_of_land
                 break
 
-        ask_how_much_grain_to_feed_people(population)
+        fed = ask_how_much_grain_to_feed_people(bushels)
+        bushels -= fed
+
         ask_how_many_acres_to_plant(acres_owned, population, bushels)
-        harvest(acres_planted)
-        if harvest(acres_planted) == 0:
+
+        harvested = harvest(acres_planted)
+        if harvested == 0:
             harvest_ratio = 0
         else:
-            harvested = harvest(acres_planted)
-            harvest_ratio = harvested/acres_planted
             bushels += harvested
 
         year += 1
@@ -162,10 +168,11 @@ def play_game():
         #plague_bodies = plague(population)
         #population -= plague_bodies
 
-        #population -= starved_deaths(population, bushels_to_feed)
-        # if uprising(population, starvation_deaths) == True:
-        #      game_over = True
-        #      break
+        starvation_deaths = starved_deaths(population, fed)
+        population -= starvation_deaths
+        if uprising(population, starvation_deaths):
+            game_over = True
+            break
 
         if population == 0:
             game_over = True
