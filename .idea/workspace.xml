@@ -42,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for TestHamurabi.summary_test.test_summary">
+  <component name="RunManager" selected="Python tests.Python tests for TestHamurabi.HamurabiTest">
     <configuration name="Hamurabi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hamurabi-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,7 +64,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for TestHamurabi.summary_test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for TestHamurabi.HamurabiTest" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Hamurabi-Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,7 +74,21 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestHamurabi.summary_test&quot;" />
+      <option name="_new_target" value="&quot;TestHamurabi.HamurabiTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for TestHamurabi.HamurabiTest.test_ask_how_many_acres_to_buy" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Hamurabi-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;TestHamurabi.HamurabiTest.test_ask_how_many_acres_to_buy&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -89,20 +103,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;TestHamurabi.summary_test.test_acres_to_buy&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for TestHamurabi.summary_test.test_ask_how_many_acres_to_buy" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Hamurabi-Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestHamurabi.summary_test.test_ask_how_many_acres_to_buy&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -122,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_summary" />
+        <item itemvalue="Python tests.Python tests for TestHamurabi.HamurabiTest" />
         <item itemvalue="Python.Hamurabi" />
+        <item itemvalue="Python tests.Python tests for TestHamurabi.HamurabiTest.test_ask_how_many_acres_to_buy" />
+        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_summary" />
         <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_acres_to_buy" />
-        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test.test_ask_how_many_acres_to_buy" />
-        <item itemvalue="Python tests.Python tests for TestHamurabi.summary_test" />
       </list>
     </recent_temporary>
   </component>

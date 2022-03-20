@@ -100,7 +100,7 @@ def immigrants():
 
 def uprising():
     percentage = starvation_deaths /(population + 1)
-    if percentage > .45:
+    if percentage > 45/100:
         return True
     else:
         return False
