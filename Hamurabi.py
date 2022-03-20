@@ -159,6 +159,7 @@ def play_game():
                 print(f'You now have {bushels} bushels and {acres_owned} acres owned after selling {acres_sold} acres.')
                 break
 
+
         bushels_to_feed = ask_how_much_grain_to_feed_people()
         bushels -= bushels_to_feed
 
